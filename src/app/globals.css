@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+
+    
+    
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.delete-icon {
+  transition: fill 0.3s; 
+}
+.edit-icon {
+  transition: fill 0.3s; 
+}
+
+.delete-icon:hover {
+  fill: #4a1900;
+  height:30px;
+  width:30px;
+  rotate: 20deg;
+  animation: buttonAnimation 0.5s ease-in-out;
+}
+.edit-icon:hover {
+  position: relative;
+  fill: #4a1900;
+  height:40px;
+  width:40px;
+  rotate: -20deg;
+  animation: buttonAnimation 0.5s ease-in-out;
+  
+}
